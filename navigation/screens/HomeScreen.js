@@ -21,11 +21,12 @@ function HomeScreen({navigation}) {
     const backgroundStyle = {
       backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     };
+    const source= require('./extras/images/my-icon.png');
   return (
    <SafeAreaView style={backgroundStyle}>
            <View>
            <Section >
-           <Images/>
+           <Images imageSource={source}/>
            </Section>
                 <Section title="Michelle Olin" >
                    Mainly educated at Blekinge Institute of Technology where I

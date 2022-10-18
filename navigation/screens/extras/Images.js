@@ -4,19 +4,19 @@ import { AppRegistry, View, Image, StyleSheet } from 'react-native';
 
 
 
-class DisplayAnImage extends Component {
-  render() {
-    return (
-      <View style={styles.viewStyle}>
-        <Image
-          style={styles.flexibleImage}
-          source={require('./images/my-icon.png')}/>
-      </View>
-    );
-  }
+function Images({imageSource}) {
+    const source = imageSource;
+        return (
+          <View style={styles.viewStyle}>
+            <Image
+              style={styles.flexibleImage}
+              source={source}/>
+          </View>
+        );
+
 }
 
-export default DisplayAnImage;
+export default Images;
 
 const styles = StyleSheet.create({
   smallImage: {
