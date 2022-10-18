@@ -4,6 +4,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 
 import HomeScreen from './screens/HomeScreen.js';
 import SkillPageScreen from './screens/SkillPageScreen.js';
+import PersonalLetterScreen from './screens/PersonalLetterScreen.js';
 
 const Tab = createBottomTabNavigator();
 function NavTab(){
@@ -12,6 +13,7 @@ function NavTab(){
 
               <Tab.Screen name="About me" component={HomeScreen} />
               <Tab.Screen name="Skill Page" component={SkillPageScreen} />
+              <Tab.Screen name="Personal Letter" component={PersonalLetterScreen} />
 
             </Tab.Navigator>
     );
