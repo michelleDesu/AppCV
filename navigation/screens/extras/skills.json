@@ -1,0 +1,32 @@
+{
+  "skill": [
+    {
+      "id": 1,
+      "text": "C++ (Basic)"
+    },
+    {
+      "id": 2,
+      "text": "CSS3 (Basic)"
+    },
+    {
+      "id": 3,
+      "text": "HTML5 (Basic)"
+    },
+    {
+      "id": 4,
+      "text": "Java (Basic)"
+    },
+    {
+      "id": 5,
+      "text": "Javascript (Basic)"
+    },
+    {
+      "id": 6,
+      "text": "AngularJS (Basic)"
+    },
+    {
+      "id": 7,
+      "text": "C# (Basic)"
+    }
+  ]
+}

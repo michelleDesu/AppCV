@@ -1,0 +1,28 @@
+{
+  "ideTools" : [
+  {
+    "id": 1,
+    "text": "Visual Studio (Basic)"
+  },
+  {
+    "id": 2,
+    "text": "IntelliJ"
+  },
+  {
+    "id": 3,
+    "text": "Eclipse (Basic)"
+  },
+  {
+    "id": 4,
+    "text": "Visual Studio Code, VSC"
+  },
+  {
+    "id": 5,
+    "text": "Microsoft SQL Server (Basic)"
+  },
+  {
+    "id": 6,
+    "text": "Git (Basic)"
+  }
+]
+}

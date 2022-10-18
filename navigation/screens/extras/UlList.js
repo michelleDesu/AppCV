@@ -10,55 +10,17 @@ import {
   View,
 } from 'react-native';
 
-function UlList(){
+function UlList({config}){
+    const {arrayElements} = config;
      return (
         <Unorderedlist style={styles.ulDefault}>
-
-            <Unorderedlist  bulletUnicode={0x2023} style={styles.ulDefault2} >
-                  <Text style={styles.ulText}>
-                       C++ (Basic)
-                  </Text>
-            </Unorderedlist>
-
-            <Unorderedlist bulletUnicode={0x2023} style={styles.ulDefault2}>
-                  <Text style={styles.ulText}>
-                      CSS3 (Basic)
-                  </Text>
-            </Unorderedlist>
-
-            <Unorderedlist bulletUnicode={0x2023} style={styles.ulDefault2}>
-                  <Text style={styles.ulText}>
-                      HTML5 (Basic)
-                  </Text>
-            </Unorderedlist>
-
-            <Unorderedlist bulletUnicode={0x2023} style={styles.ulDefault2}>
-                  <Text style={styles.ulText}>
-                      Java (Basic)
-                  </Text>
-            </Unorderedlist>
-
-
-            <Unorderedlist bulletUnicode={0x2023} style={styles.ulDefault2}>
-                  <Text style={styles.ulText}>
-                      Javascript (Basic)
-                  </Text>
-            </Unorderedlist>
-
-
-            <Unorderedlist bulletUnicode={0x2023} style={styles.ulDefault2}>
-                  <Text style={styles.ulText}>
-                      AngularJS (Basic)
-                  </Text>
-            </Unorderedlist>
-
-
-            <Unorderedlist bulletUnicode={0x2023} style={styles.ulDefault2}>
-                  <Text style={styles.ulText}>
-                      C# (Basic)
-                  </Text>
-            </Unorderedlist>
-
+               {arrayElements.map((arrayElement) => {
+                       return (
+                       <Unorderedlist  bulletUnicode={0x2023} style={styles.ulDefault2} >
+                           <Text style={styles.ulText}>{arrayElement.text}</Text>
+                        </Unorderedlist>
+                       );
+                     })}
 
         </Unorderedlist>
 

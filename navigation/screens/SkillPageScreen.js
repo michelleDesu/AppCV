@@ -18,10 +18,24 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 function SkillPageScreen({navigation}){
+
+    const skills = require('./extras/skills.json');
+    const ideTools = require('./extras/ideTools.json')
+
+                   let skillConfig = {
+                      arrayElements: skills.skill
+                    }
+                    let toolConfig = {
+                      arrayElements: ideTools.ideTools
+                    }
+
     return(
         <View style={styles.viewContent, styles.bgColor }>
             <Section title="Programming Languages" >
-                <UlList />
+                <UlList config={skillConfig} />
+            </Section>
+            <Section title="IDE/Tools" >
+                <UlList config={toolConfig} />
             </Section>
         </View>
     );
