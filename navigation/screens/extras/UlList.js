@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 function UlList({config}){
-    const {arrayElements} = config;
+    const arrayElements = config;
      return (
         <Unorderedlist style={styles.ulDefault}>
                {arrayElements.map((arrayElement) => {
