@@ -14,6 +14,7 @@ import {
   Colors,
   Header,
 } from 'react-native/Libraries/NewAppScreen';
+import Images from './extras/Images.js';
 
 function HomeScreen({navigation}) {
     const isDarkMode = useColorScheme() === 'dark';
@@ -23,7 +24,8 @@ function HomeScreen({navigation}) {
   return (
    <SafeAreaView style={backgroundStyle}>
            <View>
-           <Section title="About Me" >
+           <Section >
+           <Images/>
            </Section>
                 <Section title="Michelle Olin" >
                    Mainly educated at Blekinge Institute of Technology where I
