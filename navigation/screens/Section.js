@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import type {Node} from 'react';
 import {
@@ -23,8 +15,6 @@ import {
   Colors,
   Header,
 } from 'react-native/Libraries/NewAppScreen';
-
-import HomeScreen from './navigation/screens/HomeScreen.js';
 
 function Section({children, title}) {
   const isDarkMode = useColorScheme() === 'dark';
@@ -50,17 +40,7 @@ function Section({children, title}) {
   );
 };
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <HomeScreen/>
-  );
-};
+export default Section;
 
 const styles = StyleSheet.create({
   sectionContainer: {
@@ -80,5 +60,3 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
-
-export default App;
