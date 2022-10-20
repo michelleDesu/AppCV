@@ -17,21 +17,16 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 function Section({children, title}) {
-  const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
-      <Text
-        style={[ styles.sectionTitle, {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
+      <Text style={[ styles.sectionTitle ]}
+        >
         {title}
       </Text>
       <Text
         style={[
           styles.sectionDescription,
           {
-            color: isDarkMode ? Colors.light : Colors.dark,
           },
         ]}>
         {children}
@@ -55,8 +50,5 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
   },
 });

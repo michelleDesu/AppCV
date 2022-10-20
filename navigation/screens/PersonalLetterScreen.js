@@ -17,15 +17,12 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 function PersonalLetterScreen({navigation}){
-    const isDarkMode = useColorScheme() === 'dark';
-    const backgroundStyle = {
-      backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    };
+
     return(
-        <SafeAreaView style={backgroundStyle}>
+        <SafeAreaView>
         <ScrollView style={styles.scrollView}>
-            <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} backgroundColor={backgroundStyle.backgroundColor}/>
-            <View style={{ backgroundColor: isDarkMode ? Colors.black : Colors.white, }}>
+            <StatusBar/>
+            <View >
                 <Section title="Personal Letter">
                 </Section>
                 <Section>

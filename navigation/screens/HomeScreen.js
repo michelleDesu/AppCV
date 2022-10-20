@@ -17,13 +17,10 @@ import {
 import Images from './extras/Images.js';
 
 function HomeScreen({navigation}) {
-    const isDarkMode = useColorScheme() === 'dark';
-    const backgroundStyle = {
-      backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    };
+
     const source= require('./extras/images/my-icon.png');
   return (
-   <SafeAreaView style={backgroundStyle}>
+   <SafeAreaView >
            <View>
            <Section >
            <Images imageSource={source}/>
