@@ -26,7 +26,7 @@ export default class Login extends Component {
                 this.setState({ text: '' })
                 store.login(text)
             } else {
-                alert('Please enter login name!')
+                alert('Please enter username!')
             }
         } catch (error) {
             alert('Something went wrong')
