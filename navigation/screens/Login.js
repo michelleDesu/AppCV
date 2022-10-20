@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, TextInput, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Header, ListItem, Text, Button } from 'react-native-elements';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getLoginStore} from './../models/login/LoginStore.js';
+import {getLoginStore} from './../../models/login/LoginStore.js';
 
 const store = getLoginStore();
 
@@ -65,11 +65,12 @@ export default class Login extends Component {
      SafeAreaViewcontainer: { flex: 1, width: '100%' },
      button: {
          alignItems: 'center',
-         justifyContent: 'center',
-         alignSelf: 'center',
-         height: 55,
-         marginTop: 10,
-         backgroundColor: 'white',
+             justifyContent: 'center',
+             paddingVertical: 12,
+             paddingHorizontal: 32,
+             borderRadius: 4,
+             elevation: 3,
+             backgroundColor: 'black',
      },
      buttonsubmit: {
          width: '100%',
