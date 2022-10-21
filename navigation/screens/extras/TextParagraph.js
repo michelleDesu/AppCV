@@ -16,7 +16,7 @@ function TextParagraph({config}){
      <Section>
             {arrayElements.map((arrayElement) => {
               return (
-                  <Text key={arrayElement.id}>{arrayElement.text}{"\n"}{"\n"}</Text>
+                  <Text key={arrayElement.id}>{arrayElement.text}{'\n'}{'\n'}</Text>
               );
             })}
      </Section>

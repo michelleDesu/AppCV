@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { Provider, observer } from "mobx-react";
+import { Provider, observer } from 'mobx-react';
 import { View, TextInput, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Header, ListItem, Text, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -22,7 +22,7 @@ function NavTab(){
         <View style={styles.buttonrow}>
              <Text style={styles.text}> {store.userName}  </Text>
                <CustomButton
-                    title = "Logout"
+                    title = 'Logout'
                     onPress={store.logout}
                 />
 
@@ -42,14 +42,14 @@ function NavTab(){
                   tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
 
-                    if (route.name === "About me") {
+                    if (route.name === 'About me') {
                       iconName = focused
                         ? 'account-heart'
                         : 'account';
                     } else if (route.name === 'Skill Page') {
                       iconName = focused ? 'briefcase-check' : 'briefcase';
                     }
-                    else if (route.name === "Personal Letter") {
+                    else if (route.name === 'Personal Letter') {
                       iconName = focused ? 'email-open' : 'email';
                     }
                     return <Icon name={iconName} size={size} color={color} />;
@@ -58,9 +58,9 @@ function NavTab(){
                   tabBarInactiveTintColor: 'gray',
                 })}
               >
-            <Tab.Screen name="About me" component={HomeScreen}  />
-            <Tab.Screen name="Skill Page" component={SkillPageScreen} />
-            <Tab.Screen name="Personal Letter" component={PersonalLetterScreen} />
+            <Tab.Screen name='About me' component={HomeScreen}  />
+            <Tab.Screen name='Skill Page' component={SkillPageScreen} />
+            <Tab.Screen name='Personal Letter' component={PersonalLetterScreen} />
         </Tab.Navigator>
     </>
     );
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
      buttonrow: {
          flexDirection: 'row',
          justifyContent: 'flex-end',
-         display: "flex",
+         display: 'flex',
          backgroundColor: '#3f4042'
 
      },
@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
                 right: 5,
                 top: 5,
                 fontSize: 20,
-                fontWeight: "bold",
-                color: "pink"
+                fontWeight: 'bold',
+                color: 'pink'
      },
      screenStyle: {
         backgroundColor: '#3f4042',

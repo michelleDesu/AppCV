@@ -23,10 +23,10 @@ function SkillPageScreen({navigation}){
         <SafeAreaView style={styles.SafeAreaViewcontainer}>
             <ScrollView style={styles.scrollView}>
                 <View style={styles.viewContent, styles.bgColor }>
-                    <Section title="Programming Languages" >
+                    <Section title='Programming Languages' >
                         <UlList config={skills.skill} />
                     </Section>
-                    <Section title="IDE/Tools" >
+                    <Section title='IDE/Tools' >
                         <UlList config={ideTools.ideTools} />
                     </Section>
                 </View>

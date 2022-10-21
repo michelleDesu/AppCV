@@ -26,7 +26,7 @@ function HomeScreen({navigation}) {
                 <Section >
                 <Images imageSource={source}/>
                 </Section>
-                    <Section title="Michelle Olin" >
+                    <Section title='Michelle Olin' >
                     Mainly educated at Blekinge Institute of Technology where I
                     studied game programming. During my worklife I have worked in
                     various administrative positions where communication and a

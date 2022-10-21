@@ -1,9 +1,9 @@
-import React from "react";
-import { observable, action, computed, makeObservable } from "mobx";
+import React from 'react';
+import { observable, action, computed, makeObservable } from 'mobx';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class LoginStore{
-    @observable userName = "";
+    @observable userName = '';
     @observable loggedIn = false;
 
 
@@ -17,7 +17,7 @@ class LoginStore{
 
         };
         @action logout = async () => {
-            this.userName= "";
+            this.userName= '';
             this.loggedIn = false;
         };
 }

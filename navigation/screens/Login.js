@@ -48,7 +48,7 @@ export default class Login extends Component {
 
                     <View style={styles.buttonrow}>
                         <CustomButton
-                            title="Login"
+                            title='Login'
                             containerStyle={styles.buttonsubmit}
                             onPress={this.logIn}
                         />
@@ -76,12 +76,12 @@ export default class Login extends Component {
      buttonrow: {
         flexDirection: 'row',
         justifyContent: 'center',
-        display: "flex",
+        display: 'flex',
      },
      textinput:{
          borderWidth: 2,
-         marginLeft: "10%",
-         marginRight: "10%",
+         marginLeft: '10%',
+         marginRight: '10%',
          borderRadius: 10 ,
          borderColor: '#dadee3',
          marginBottom: 10,
