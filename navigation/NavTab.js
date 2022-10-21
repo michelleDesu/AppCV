@@ -10,6 +10,8 @@ import SkillPageScreen from './screens/SkillPageScreen.js';
 import PersonalLetterScreen from './screens/PersonalLetterScreen.js';
 import {getLoginStore} from './../models/login/LoginStore.js';
 
+import CustomButton from './screens/extras/CustomButton.js'
+
 const store = getLoginStore();
 const Tab = createBottomTabNavigator();
 
@@ -17,12 +19,13 @@ function NavTab(){
     return(
     <>
         <View style={styles.buttonrow}>
-
-             <Button style={styles.button}
-                 title="Log out"
-                 onPress={store.logout}
-             />
              <Text style={styles.text}> {store.userName}  </Text>
+               <CustomButton
+                    title = "Logout"
+                    onPress={store.logout}
+                />
+
+
         </View>
         <Tab.Navigator>
             <Tab.Screen name="About me" component={HomeScreen} />
@@ -37,16 +40,18 @@ export default observer(NavTab);
 const styles = StyleSheet.create({
      SafeAreaViewcontainer: { flex: 1, width: '100%' },
      button: {
-        position: 'absolute',
-                        right: 5,
-                        top: 5,
+
+        right: 5,
+        top: 5,
      },
 
      buttonrow: {
-         flexDirection: 'row'
+         flexDirection: 'row',
+         justifyContent: 'flex-end',
+         display: "flex",
+
      },
      text: {
-         position: 'absolute',
                 right: 5,
                 top: 5,
                 fontSize: 20,

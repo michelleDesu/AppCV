@@ -3,6 +3,7 @@ import { View, TextInput, SafeAreaView, StyleSheet, TouchableOpacity } from 'rea
 import { Header, ListItem, Text, Button } from 'react-native-elements';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getLoginStore} from './../../models/login/LoginStore.js';
+import CustomButton from './extras/CustomButton.js';
 
 const store = getLoginStore();
 
@@ -46,7 +47,7 @@ export default class Login extends Component {
                     />
 
                     <View style={styles.buttonrow}>
-                        <Button
+                        <CustomButton
                             title="Login"
                             containerStyle={styles.buttonsubmit}
                             onPress={this.logIn}
@@ -82,7 +83,9 @@ export default class Login extends Component {
          marginBottom: 20,
      },
      buttonrow: {
-         flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent: 'center',
+        display: "flex",
      },
      textinput:{
          borderWidth: 1,
