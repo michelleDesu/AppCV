@@ -16,7 +16,7 @@ function UlList({config}){
         <Unorderedlist style={styles.ulDefault}>
                {arrayElements.map((arrayElement) => {
                        return (
-                       <Unorderedlist  bulletUnicode={0x2023} style={styles.ulDefault2} >
+                       <Unorderedlist  key={arrayElement.id} bulletUnicode={0x2023} style={styles.ulDefault2} >
                            <Text style={styles.ulText}>{arrayElement.text}</Text>
                         </Unorderedlist>
                        );
