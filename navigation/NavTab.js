@@ -30,6 +30,15 @@ function NavTab(){
         </View>
         <Tab.Navigator
                 screenOptions={({ route }) => ({
+                    headerStyle: { backgroundColor: '#3f4042',},
+                    headerTintColor: '#f2dec4',
+                    headerTitleStyle: {
+                    fontWeight: 'bold',
+                    },
+                    headerTitleAlign: 'center',
+                    tabBarStyle: {
+                              backgroundColor: '#3f4042',
+                            },
                   tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
 
@@ -49,8 +58,7 @@ function NavTab(){
                   tabBarInactiveTintColor: 'gray',
                 })}
               >
-
-            <Tab.Screen name="About me" component={HomeScreen} />
+            <Tab.Screen name="About me" component={HomeScreen}  />
             <Tab.Screen name="Skill Page" component={SkillPageScreen} />
             <Tab.Screen name="Personal Letter" component={PersonalLetterScreen} />
         </Tab.Navigator>
@@ -71,12 +79,18 @@ const styles = StyleSheet.create({
          flexDirection: 'row',
          justifyContent: 'flex-end',
          display: "flex",
+         backgroundColor: '#3f4042'
 
      },
      text: {
                 right: 5,
                 top: 5,
                 fontSize: 20,
-                fontWeight: "bold"
+                fontWeight: "bold",
+                color: "pink"
      },
+     screenStyle: {
+        backgroundColor: '#3f4042',
+     }
  });
+

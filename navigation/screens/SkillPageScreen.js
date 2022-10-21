@@ -20,20 +20,25 @@ function SkillPageScreen({navigation}){
     const ideTools = require('./extras/ideTools.json');
 
     return(
-        <View style={styles.viewContent, styles.bgColor }>
-            <Section title="Programming Languages" >
-                <UlList config={skills.skill} />
-            </Section>
-            <Section title="IDE/Tools" >
-                <UlList config={ideTools.ideTools} />
-            </Section>
-        </View>
+        <SafeAreaView style={styles.SafeAreaViewcontainer}>
+            <ScrollView style={styles.scrollView}>
+                <View style={styles.viewContent, styles.bgColor }>
+                    <Section title="Programming Languages" >
+                        <UlList config={skills.skill} />
+                    </Section>
+                    <Section title="IDE/Tools" >
+                        <UlList config={ideTools.ideTools} />
+                    </Section>
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     );
 }
 export default SkillPageScreen;
 
 
 const styles = StyleSheet.create({
+   SafeAreaViewcontainer: { flex: 1, width: '100%' },
 
    bgColor:{
      backgroundColor: '#f2dec4',
@@ -43,5 +48,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center' ,
    },
+    scrollView: {
+           backgroundColor: '#f2dec4',
+         },
 
  });
