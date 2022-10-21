@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import { View, TextInput, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
-import { Header, ListItem, Text, Button } from 'react-native-elements';
+import {
+View,
+TextInput,
+SafeAreaView,
+StyleSheet,
+Header,
+ListItem,
+Text,
+Button
+} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getLoginStore} from './../../models/login/LoginStore.js';
 import CustomButton from './extras/CustomButton.js';
@@ -39,21 +47,21 @@ export default class Login extends Component {
     return (
         <>
             <SafeAreaView style={styles.SafeAreaViewcontainer}>
-                <View style={{ margin: 10 }}>
-                    <TextInput style={styles.textinput}
-                        value={text}
-                        placeholder={'Enter a username here'}
-                        onChangeText={this.onChangeText}
-                    />
-
-                    <View style={styles.buttonrow}>
-                        <CustomButton
-                            title='Login'
-                            containerStyle={styles.buttonsubmit}
-                            onPress={this.logIn}
+                    <View style={styles.viewStyle}>
+                        <TextInput style={styles.textinput}
+                            value={text}
+                            placeholder={'Enter a username here'}
+                            onChangeText={this.onChangeText}
                         />
+
+                        <View style={styles.buttonrow}>
+                            <CustomButton
+                                title='Login'
+                                containerStyle={styles.buttonsubmit}
+                                onPress={this.logIn}
+                            />
+                        </View>
                     </View>
-                </View>
             </SafeAreaView>
         </>
     );
@@ -62,8 +70,10 @@ export default class Login extends Component {
  }
 
  const styles = StyleSheet.create({
-     SafeAreaViewcontainer: { flex: 1, width: '100%' , justifyContent: 'center'},
-
+     SafeAreaViewcontainer: { flex: 1, width: '100%' , justifyContent: 'center', backgroundColor: '#3f4042',},
+     viewStyle:{
+           margin: 10,
+         },
      buttonsubmit: {
          width: '100%',
          flex: 1,
@@ -85,5 +95,8 @@ export default class Login extends Component {
          borderRadius: 10 ,
          borderColor: '#dadee3',
          marginBottom: 10,
-     }
+         backgroundColor:'#f2dec4',
+     },
+
  });
+
