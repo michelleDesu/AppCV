@@ -4,6 +4,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { Provider, observer } from "mobx-react";
 import { View, TextInput, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Header, ListItem, Text, Button } from 'react-native-elements';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import HomeScreen from './screens/HomeScreen.js';
 import SkillPageScreen from './screens/SkillPageScreen.js';
@@ -27,7 +28,28 @@ function NavTab(){
 
 
         </View>
-        <Tab.Navigator>
+        <Tab.Navigator
+                screenOptions={({ route }) => ({
+                  tabBarIcon: ({ focused, color, size }) => {
+                    let iconName;
+
+                    if (route.name === "About me") {
+                      iconName = focused
+                        ? 'account-heart'
+                        : 'account';
+                    } else if (route.name === 'Skill Page') {
+                      iconName = focused ? 'briefcase-check' : 'briefcase';
+                    }
+                    else if (route.name === "Personal Letter") {
+                      iconName = focused ? 'email-open' : 'email';
+                    }
+                    return <Icon name={iconName} size={size} color={color} />;
+                  },
+                  tabBarActiveTintColor: 'tomato',
+                  tabBarInactiveTintColor: 'gray',
+                })}
+              >
+
             <Tab.Screen name="About me" component={HomeScreen} />
             <Tab.Screen name="Skill Page" component={SkillPageScreen} />
             <Tab.Screen name="Personal Letter" component={PersonalLetterScreen} />
